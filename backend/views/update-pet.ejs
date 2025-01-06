@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update Pet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8 max-w-2xl">
+    <h1 class="text-3xl font-bold text-center mb-8">Update Pet</h1>
+
+    <!-- Error Display -->
+    <% if (error) { %>
+      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
+        <%= error %>
+      </div>
+      <% } %>
+
+        <form id="update-pet-form" action="/pets/<%= pet._id %>?_method=PATCH" method="post"
+          enctype="multipart/form-data" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 space-y-6"">
+          <!-- Name -->
+          <div>
+            <label class=" block text-gray-700 text-sm font-bold mb-2" for="name">
+          Pet Name *
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name" type="text" name="name" minlength="2" maxlength="50" required value="<%= pet.name || '' %>">
+  </div>
+
+  <!-- Weight -->
+  <div>
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="weight">
+      Weight (kg) *
+    </label>
+    <input
+      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      id="weight" type="text" name="weight" placeholder="e.g., '20' or '20 - 25'" required
+      value="<%= pet.weight || '' %>">
+  </div>
+
+  <!-- Current Image -->
+  <% if (pet.url) { %>
+    <div>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Current Image</label>
+      <img src="<%= pet.url %>" alt="<%= pet.name %>" class="w-32 h-32 object-cover rounded-md">
+    </div>
+    <% } %>
+
+      <!-- New Image -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="image">
+          Update Image
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="image" type="file" name="url" accept="image/*">
+      </div>
+
+      <!-- Country Code -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="country_code">
+          Country Code
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="country_code" type="text" name="country_code" placeholder="US" pattern="[A-Z]{2}" maxlength="2"
+          value="<%= pet.country_code || '' %>">
+      </div>
+
+      <!-- Description -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="desc">
+          Description
+        </label>
+        <textarea
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="desc" name="desc" maxlength="1000" rows="4"><%= pet.desc || '' %></textarea>
+      </div>
+
+      <!-- Bred For -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="bred_for">
+          Bred For
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="bred_for" type="text" name="bred_for" maxlength="200" value="<%= pet.bred_for || '' %>">
+      </div>
+
+      <!-- Breed Group -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="breed_group">
+          Breed Group
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="breed_group" type="text" name="breed_group" maxlength="50" value="<%= pet.breed_group || '' %>">
+      </div>
+
+      <!-- Life Span -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="life_span">
+          Life Span
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="life_span" type="text" name="life_span" placeholder="e.g., '10 years' or '10-12 years'"
+          value="<%= pet.life_span || '' %>">
+      </div>
+
+      <!-- Temperament -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="temperament">
+          Temperament
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="temperament" type="text" name="temperament" maxlength="200" value="<%= pet.temperament || '' %>">
+      </div>
+
+      <!-- Origin -->
+      <div>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="origin">
+          Origin
+        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="origin" type="text" name="origin" maxlength="100" value="<%= pet.origin || '' %>">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex items-center justify-end">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+          type="submit">
+          Update Pet
+        </button>
+      </div>
+      </form>
+      </div>
+</body>
+<script>
+  document.getElementById('update-pet-form').addEventListener('submit', async function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const form = event.target; // Reference to the form
+    const formData = new FormData(form); // Collect form data
+    console.log('Form Data:', Object.fromEntries(formData)); // Log form data
+
+    const response = await fetch(`/pets/edit/<%= pet._id %>`, {
+      method: 'PATCH',
+      body: formData
+    });
+
+    window.location.href = '/pets'; // Redirect to /pets on success
+
+
+  });
+</script>
+
+</html>

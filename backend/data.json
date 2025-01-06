@@ -1,0 +1,110 @@
+[
+  {
+    "weight": "27 - 54",
+    "url": "https://cdn2.thedogapi.com/images/vC8eq6joG.jpg",
+    "name": "American Bulldog",
+    "country_code": "US",
+    "description": "A strong, confident, and loyal dog breed.",
+    "bred_for": "Guardian and companionship",
+    "breed_group": "Working",
+    "life_span": "10 - 12 years",
+    "origin": "United States",
+    "temperament": "Friendly, Assertive, Gentle"
+  },
+  {
+    "weight": "18 - 29",
+    "url": "https://cdn2.thedogapi.com/images/KozrdsGZv.jpg",
+    "name": "Airedale Terrier",
+    "country_code": "US",
+    "description": "The largest of all terriers, Airedales are versatile and intelligent.",
+    "bred_for": "Hunting and farm work",
+    "breed_group": "Terrier",
+    "life_span": "10 - 13 years",
+    "origin": "United Kingdom",
+    "temperament": "Outgoing, Confident, Friendly"
+  },
+  {
+    "weight": "18 - 29",
+    "url": "https://cdn2.thecatapi.com/images/88c.jpg",
+    "name": "American Curl",
+    "country_code": "US",
+    "description": "Known for their unique curled-back ears and playful personality.",
+    "bred_for": "Companionship",
+    "breed_group": "Natural",
+    "life_span": "12 - 16 years",
+    "origin": "United States",
+    "temperament": "Affectionate, Playful, Intelligent"
+  },
+  {
+    "weight": "17 - 23",
+    "url": "https://cdn2.thecatapi.com/images/e7m.jpg",
+    "name": "Australian Mist",
+    "country_code": "AU",
+    "description": "A breed developed in Australia, known for their spotted coat.",
+    "bred_for": "Companionship",
+    "breed_group": "Mixed",
+    "life_span": "14 - 18 years",
+    "origin": "Australia",
+    "temperament": "Friendly, Calm, Affectionate"
+  },
+  {
+    "weight": "3 - 6",
+    "url": "https://cdn2.thedogapi.com/images/B1fG6PT4Q.gif",
+    "name": "Affenpinscher",
+    "country_code": "US",
+    "description": "Small but bold, often referred to as a 'monkey dog' due to their playful expressions.",
+    "bred_for": "Rodent hunting",
+    "breed_group": "Toy",
+    "life_span": "12 - 15 years",
+    "origin": "Germany",
+    "temperament": "Confident, Funny, Fearless"
+  },
+  {
+    "weight": "3 - 6",
+    "url": "https://cdn2.thecatapi.com/images/g8.jpg",
+    "name": "Abyssinian",
+    "country_code": "EG",
+    "description": "A sleek and playful cat with a short, ticked coat.",
+    "bred_for": "Companionship",
+    "breed_group": "Natural",
+    "life_span": "9 - 15 years",
+    "origin": "Egypt",
+    "temperament": "Active, Curious, Energetic"
+  },
+  {
+    "weight": "27 - 54",
+    "url": "https://cdn2.thecatapi.com/images/MTgzNTU1MQ.jpg",
+    "name": "Bambino",
+    "country_code": "US",
+    "description": "A dwarf cat breed known for its hairless body and playful demeanor.",
+    "bred_for": "Companionship",
+    "breed_group": "Hybrid",
+    "life_span": "12 - 14 years",
+    "origin": "United States",
+    "temperament": "Loving, Playful, Social"
+  },
+  {
+    "weight": "20 - 30",
+    "url": "https://cdn2.thedogapi.com/images/YbXK-k96Y.jpg",
+    "name": "African Hunting Dog",
+    "country_code": "US",
+    "description": "A wild hunting dog known for its stamina and pack behavior.",
+    "bred_for": "Hunting",
+    "breed_group": "Working",
+    "life_span": "10 - 12 years",
+    "origin": "Africa",
+    "temperament": "Energetic, Loyal, Brave"
+  },
+  {
+    "weight": "23 - 27",
+    "url": "https://cdn2.thecatapi.com/images/4ep.jpg",
+    "name": "Aegean",
+    "country_code": "GR",
+    "description": "A natural breed from Greece, often found near the Aegean Sea.",
+    "bred_for": "Companionship",
+    "breed_group": "Natural",
+    "life_span": "9 - 14 years",
+    "origin": "Greece",
+    "temperament": "Friendly, Social, Intelligent"
+  }
+]

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Pet</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto px-4 py-8 max-w-2xl">
+    <h1 class="text-3xl font-bold text-center mb-8">Add New Pet</h1>
+
+    <!-- Error Display -->
+    <% if (error) { %>
+      <div class="bg-red-100 text-red-700">
+        <%= error %>
+      </div>
+      <% } %>
+
+        <form action="/api/pets/create" method="POST" enctype="multipart/form-data"
+          class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 space-y-6">
+          <!-- Name -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+              Pet Name *
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="name" type="text" name="name" minlength="2" maxlength="50" required
+              value="<%= formData.name || '' %>">
+          </div>
+
+          <!-- Weight -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="weight">
+              Weight (kg) *
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="weight" type="text" name="weight" placeholder="e.g., '20' or '20 - 25'" required>
+          </div>
+
+          <!-- Image URL -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="image">
+              Pet Image *
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="image" type="file" name="image" accept="image/*" required>
+          </div>
+
+          <!-- Country Code -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="country_code">
+              Country Code
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="country_code" type="text" name="country_code" placeholder="US" pattern="[A-Z]{2}" maxlength="2">
+          </div>
+
+          <!-- Description -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="desc">
+              Description
+            </label>
+            <textarea
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="desc" name="desc" maxlength="1000" rows="4"></textarea>
+          </div>
+
+          <!-- Bred For -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="bred_for">
+              Bred For
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="bred_for" type="text" name="bred_for" maxlength="200">
+          </div>
+
+          <!-- Breed Group -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="breed_group">
+              Breed Group
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="breed_group" type="text" name="breed_group" maxlength="50">
+          </div>
+
+          <!-- Life Span -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="life_span">
+              Life Span
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="life_span" type="text" name="life_span" placeholder="e.g., '10 years' or '10-12 years'">
+          </div>
+
+          <!-- Temperament -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="temperament">
+              Temperament
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="temperament" type="text" name="temperament" maxlength="200">
+          </div>
+
+          <!-- Origin -->
+          <div>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="origin">
+              Origin
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="origin" type="text" name="origin" maxlength="100">
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex items-center justify-end">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline"
+              type="submit">
+              Add Pet
+            </button>
+          </div>
+        </form>
+  </div>
+</body>
+
+</html>
