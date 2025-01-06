@@ -1,0 +1,15 @@
+.hero {
+  height: calc(100vh - 70px);
+  background: linear-gradient(180deg, #f9d0fc, #e1ffea22 80%);
+}
+
+.favorite-notification {
+  position: absolute;
+  bottom: 0;
+  right: -12px;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
